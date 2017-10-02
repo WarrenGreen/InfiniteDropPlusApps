@@ -1,0 +1,13 @@
+<!doctype html>
+<title>InfiniteDrop+Apps</title>
+<table>
+    <th style="text-align:left">Files</th>
+{% for file_id, filename, is_image in files %}
+    {% if is_image %}
+    <tr><td><a href='image?file_id={{file_id}}'>{{ filename }}</a></td></tr>
+    {% else %}
+    <tr><td>{{ filename }}</td></tr>
+    {% endif %}
+
+{% endfor %}
+</table>
